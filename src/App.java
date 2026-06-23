@@ -1,11 +1,12 @@
-import java.util.HashSet;
+
 import java.util.Set;
+import java.util.TreeSet;
 
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Bienvenidos a la fiesta de los superheroes");
 
-        Set<String> superHeroes = new HashSet<>();
+        Set<String> superHeroes = new TreeSet<>();
 
         superHeroes.add("Spiderman");
         superHeroes.add("Batman");
@@ -36,10 +37,11 @@ public class App {
             System.out.println("Aun quedan "+ superHeroes.size() + " superheroes");
         }
 
-        //hashSet no guarda el orden, imprime en cualquier orden
+        //hashSet no guarda en un orden especifico (podemos asignar), imprime en orden alfabetico
         System.out.println("Quienes estan aun en la fiesta?");
         for (String superHeroe : superHeroes) {
             System.out.println(superHeroe);
         }
+        
     }
 }
