@@ -1,12 +1,13 @@
 
+import java.util.LinkedHashSet;
 import java.util.Set;
-import java.util.TreeSet;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Bienvenidos a la fiesta de los superheroes");
 
-        Set<String> superHeroes = new TreeSet<>();
+        Set<String> superHeroes = new LinkedHashSet<>();
 
         superHeroes.add("Spiderman");
         superHeroes.add("Batman");
@@ -37,7 +38,7 @@ public class App {
             System.out.println("Aun quedan "+ superHeroes.size() + " superheroes");
         }
 
-        //hashSet no guarda en un orden especifico (podemos asignar), imprime en orden alfabetico
+        //Imprime en el mismo orden en que se agregaron los elementos
         System.out.println("Quienes estan aun en la fiesta?");
         for (String superHeroe : superHeroes) {
             System.out.println(superHeroe);
