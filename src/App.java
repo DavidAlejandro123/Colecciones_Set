@@ -1,13 +1,13 @@
-
-import java.util.LinkedHashSet;
-import java.util.Set;
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Bienvenidos a la fiesta de los superheroes");
 
-        Set<String> superHeroes = new LinkedHashSet<>();
+        List<String> superHeroes = new ArrayList<>();
+        //List<String> superHeroes = new LinkedList<>();
+        //List<String> superHeroes = new Vector<>();
 
         superHeroes.add("Spiderman");
         superHeroes.add("Batman");
@@ -23,15 +23,18 @@ public class App {
             System.out.println("Spiderman esta en la fiesta");    
         }
 
-        superHeroes.remove("Hulk");
+        System.out.println("Hay un superheroe que ya ceno, ese es "+superHeroes.get(0));
+        //superHeroes.remove(3);
 
         if(!superHeroes.contains("Hulk")){
             System.out.println("Hulk se ha ido de la fiesta");
         }
 
-        //por propiedad de set, ya no agrega superman porque no permite elementos duplicados
+        //por propiedad de list, permite duplicar elementos
         superHeroes.add("Superman");
 
+        superHeroes.set(6, "Tony Stark");
+        System.out.println("Ironman se saca el traje mostrando su verdadera identidad que es: "+superHeroes.get(6));
         if(superHeroes.isEmpty()){
             System.out.println("La fiesta ha terminado, ya no hay superheroes");
         } else{
